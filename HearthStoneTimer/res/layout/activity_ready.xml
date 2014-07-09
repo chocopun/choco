@@ -7,9 +7,9 @@
         android:id="@+id/layout_ad"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_alignParentBottom="true"
         android:background="#999"
         android:orientation="vertical" >
+        
     </LinearLayout>
 
     <LinearLayout

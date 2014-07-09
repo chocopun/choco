@@ -41,15 +41,15 @@ public class HearthStoneTimerActivity extends ActionBarActivity implements OnCli
 
 		Intent intent = getIntent();
 		String playordraw = intent.getStringExtra("key");
-		
-		/*adView = new AdView(this);
+
+		adView = new AdView(this);
 		adView.setAdUnitId(AD_UNIT_ID);
 		adView.setAdSize(AdSize.BANNER);
 
-		LinearLayout layout = (LinearLayout) findViewById(R.id.linearLayout);
+		LinearLayout layout = (LinearLayout) findViewById(R.id.layout_ad);
 		layout.addView(adView);
 		AdRequest adRequest = new AdRequest.Builder().build();
-	    adView.loadAd(adRequest);*/
+		adView.loadAd(adRequest);
 
 		//ID�̎擾
 		enemyTime = (Chronometer) findViewById(R.id.EnemyTime);
@@ -178,22 +178,22 @@ public class HearthStoneTimerActivity extends ActionBarActivity implements OnCli
 			enemyTimer.setText(Long.toString(millisUntilFinished/1000/60) + ":" + Long.toString(millisUntilFinished/1000%60));
 		}
 	}
-	
-	/*@Override
-	  public void onPause() {
-	    adView.pause();
-	    super.onPause();
-	  }
 
-	  @Override
-	  public void onResume() {
-	    super.onResume();
-	    adView.resume();
-	  }
+	@Override
+	public void onPause() {
+		adView.pause();
+		super.onPause();
+	}
 
-	  @Override
-	  public void onDestroy() {
-	    adView.destroy();
-	    super.onDestroy();
-	  }*/
+	@Override
+	public void onResume() {
+		super.onResume();
+		adView.resume();
+	}
+
+	@Override
+	public void onDestroy() {
+		adView.destroy();
+		super.onDestroy();
+	}
 }

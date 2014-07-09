@@ -16,21 +16,22 @@ import android.widget.RadioGroup;
 import android.widget.Toast;
 
 public class HearthStoneReadyActivity extends Activity implements OnClickListener{
-	//private AdView adView;
-	//private static final String AD_UNIT_ID = "ca-app-pub-1152697570124074/2794941949";
+	private AdView adView;
+	private static final String AD_UNIT_ID = "ca-app-pub-1152697570124074/2794941949";
 	int playordraw = 0;
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_ready);
 
-		/*adView = new AdView(this);
-	    adView.setAdUnitId(AD_UNIT_ID);
-	    adView.setAdSize(AdSize.BANNER);
+		adView = new AdView(this);
+		adView.setAdUnitId(AD_UNIT_ID);
+		adView.setAdSize(AdSize.BANNER);
 
-	    LinearLayout layout = (LinearLayout) findViewById(R.id.layout_ad2);
-	    //layout.addView(adView);
-	    adView.loadAd(new AdRequest.Builder().build());*/
+		LinearLayout layout = (LinearLayout) findViewById(R.id.layout_ad);
+		layout.addView(adView);
+		AdRequest adRequest = new AdRequest.Builder().build();
+	    adView.loadAd(adRequest);
 
 		Button mGameStartBtn = (Button)findViewById(R.id.GameStart);
 		mGameStartBtn.setOnClickListener(this);
@@ -64,7 +65,7 @@ public class HearthStoneReadyActivity extends Activity implements OnClickListene
 		}
 	}
 
-	/*@Override
+	@Override
 	public void onPause() {
 		adView.pause();
 		super.onPause();
@@ -80,5 +81,5 @@ public class HearthStoneReadyActivity extends Activity implements OnClickListene
 	public void onDestroy() {
 		adView.destroy();
 		super.onDestroy();
-	}*/
+	}
 }
