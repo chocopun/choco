@@ -5,14 +5,14 @@
     android:layout_height="match_parent"
     tools:context="jp.chnr.hearthstonetimer.HearthStoneTimerActivity"
     tools:ignore="MergeRootFrame" >
-
+    
     <LinearLayout
-        android:id="@+id/layout_ad2"
+        android:id="@+id/layout_ad"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_alignParentBottom="true"
         android:background="#999"
         android:orientation="vertical" >
+        
     </LinearLayout>
 
     <LinearLayout
@@ -26,6 +26,7 @@
             android:id="@+id/EnemyTimer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:text="@string/enemytimer" />
 
         <Chronometer
@@ -82,13 +83,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/endgame" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/adlinearLayout2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical" >
     </LinearLayout>
 
 </FrameLayout>
