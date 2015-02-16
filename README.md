@@ -1,3 +1,3 @@
 # Practice
 =====
-## Timer App
+## Timer App for HearthStrone
